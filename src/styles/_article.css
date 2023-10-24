@@ -1,0 +1,35 @@
+.article {
+    background-color: var(--color-product-2);
+    border-radius: 6px;
+}
+
+.article__details {
+    padding: var(--size-2) var(--size-3);
+
+    &[open] summary {
+        margin-bottom: var(--size-2);
+        & span {
+            text-decoration: underline;
+        }
+    }
+}
+.article__summary {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    & b {
+        font-size: 20px;
+    }
+
+    & span {
+        cursor: pointer;
+    }
+    
+    &::-webkit-details-marker,
+    &::marker{
+        display: none;
+        font-size: 0;
+    }
+}

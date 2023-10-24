@@ -1,0 +1,16 @@
+.review {
+    background-color: var(--color-product-2);
+    padding: var(--size-5);
+    border-radius: 6px;
+}
+
+.review__title {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: var(--size-half);
+}
+.review__date {
+    margin-bottom: var(--size-2);
+    line-height: 1.5;
+    display: block;
+}

@@ -1,0 +1,64 @@
+/*! CSS custom properties (variables) */
+
+@custom-media --screen-desktop-large (min-width: 1399px);
+@custom-media --screen-desktop (max-width: 1199px);
+@custom-media --screen-laptop (max-width: 991px);
+@custom-media --screen-tablet (max-width: 767px);
+@custom-media --screen-phone (max-width: 375px);
+
+:root{
+    --module: 10px;
+
+    --size-half: calc(var(--module) / 2);
+    --size-1: var(--module);
+    --size-2: calc(var(--module) * 2);
+    --size-3: calc(var(--module) * 3);
+    --size-4: calc(var(--module) * 4);
+    --size-5: calc(var(--module) * 5);
+    --size-6: calc(var(--module) * 6);
+    --size-7: calc(var(--module) * 7);
+    --size-8: calc(var(--module) * 8);
+    --size-9: calc(var(--module) * 9);
+    --size-10:calc(var(--module) * 10);
+
+    --text-font-size: 16px;
+    --text-line-height: 1.5;
+    --heading-1: 50px;
+    --heading-2: 40px;
+    --heading-3: 24px;
+    --lead-font-size: 20px;
+    --small-font-size: 12px;
+
+    --text-color: #242424;
+    --color-white: #FEFEFE;
+    --color-gray: #D9D9D9;
+    --color-black: #161616;
+    --color-product: #00AEAD;
+    --color-product-2: #E5F6F6;
+
+    --gutter: var(--size-3);
+    --container-width: calc(1440px + var(--gutter));
+    --section-x-gutter: var(--gutter);
+}
+
+@media screen and (--screen-desktop-large) {
+    :root {}
+}
+
+@media screen and (--screen-laptop) {
+    :root {}
+}
+
+@media screen and (--screen-tablet) {
+    :root {
+        --heading-1: 32px;
+        --heading-2: 24px;
+        --heading-3: 20px;
+        --lead-font-size: 16px
+    }
+}
+
+@media screen and (--screen-phone) {
+    :root {}
+}
+

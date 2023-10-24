@@ -1,0 +1,33 @@
+.form-label {
+    display: block;
+}
+
+.form-input {
+    border: none;
+    border-bottom: 1px solid var(--color-gray);
+    padding: var(--size-1) 0;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    width: 100%;
+
+    &:focus {
+        border-color: var(--color-product);
+        outline: none;
+    }
+}
+
+textarea.form-input {
+    resize: vertical;
+    max-height: 200px;
+    min-height: 39px;
+}
+
+.form-checkbox-label {
+    display: flex;
+    align-items: baseline;
+    line-height: 1.5;
+
+    & [type="checkbox"] {
+        margin-right: 0.5em;
+    }
+}

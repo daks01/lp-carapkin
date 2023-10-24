@@ -1,0 +1,137 @@
+/*! npm i && npm run build */
+@import '_normalize.css';
+@import '_variables.css';
+@import '_pagescroll.css';
+@import '_typography.css';
+@import '_flex-grid.css';
+@import '_button.css';
+@import '_header.css';
+@import '_section.css';
+@import '_hero.css';
+@import '_article.css';
+@import '_timeline.css';
+@import '_review.css';
+@import '_form.css';
+@import '_footer.css';
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--color-white);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-size: var(--text-font-size);
+  line-height: var(--text-line-height);
+  color: var(--text-color);
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+a,
+.link {
+  color: var(--color-product);
+  text-decoration-thickness: .5px;
+  text-underline-offset: 2px;
+
+  &:hover {
+    filter: brightness(112%);
+  }
+}
+
+button {
+  line-height: unset;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-gray);
+  margin: 0 auto var(--size-5);
+  max-width: calc(var(--container-width) - var(--section-x-gutter) - var(--section-x-gutter));
+  width: 100%;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.link {
+  color: var(--text-color);
+  color: currentColor;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--color-product);
+  border: none;
+  background: none;
+
+  &:hover {
+    color: var(--color-product);
+  }
+}
+
+.link-more {
+  color: var(--color-product);
+  text-decoration: none;
+  font-size: 18px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+
+.hide-on-desktop {
+  display: none;
+}
+.hide-on-mobile {
+  display: block;
+}
+
+@media screen and (--screen-laptop) {
+  .hide-on-desktop {
+    display: block;
+  }
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+
+.splide__button-wrap {
+      text-align: right;
+      margin: -100px 0 70px;
+}
+.splide__button {
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+
+  &:hover {
+    color: var(--color-product);
+  }
+}

@@ -1,0 +1,24 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    transition: filter .1s;
+    border: none;
+    border-radius: 6px;
+    padding: 13px 23px;
+    background: var(--color-product);
+    color: var(--color-white);
+    font-weight: 400;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        filter: brightness(105%);
+    }
+    &:active {
+        filter: brightness(97%);
+    }
+}

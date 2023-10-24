@@ -1,0 +1,80 @@
+h1, .h1 {
+    font-size: var(--heading-1);
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0 0 1.1em;
+    text-align: center;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+h2, .h2 {
+    font-size: var(--heading-2);
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0 0 1.1em;
+    text-align: center;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+h3, .h3 {
+    font-size: var(--heading-3);
+    line-height: 1.5;
+    font-weight: 700;   
+    margin: 2em 0 .7em;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+p, ul, ol, table, blockquote, .text img {
+    margin: 0 0 calc(var(--module) * 1.6);  
+}
+
+ul, ol {
+    padding-left: var(--size-2);
+}
+ul > li {
+    list-style-type: disc;
+    line-height: 1.5;
+    margin-bottom: var(--size-1);
+}
+
+.small {
+    font-size: var(--small-font-size);
+}
+
+.lead {
+    font-size: var(--lead-font-size);
+    line-height: 1.4;
+}
+
+h1 + .lead,
+h2 + .lead,
+.h1 + .lead,
+.h2 + .lead {
+    margin-top: -1.8em;
+    margin-bottom: var(--size-5);
+    text-align: center;
+}
+
+.details {
+    & > summary {
+        cursor: pointer;
+
+        &::-webkit-details-marker,
+        &::marker{
+            display: none;
+            font-size: 0;
+        }
+    }
+    &[open] summary {
+        display: none;
+    }
+}
