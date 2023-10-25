@@ -1,7 +1,7 @@
 /*! npm i && npm run build */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/*! Page scroll */
 /*! CSS custom properties (variables) */
+/*! Page scroll */
 html {
   -webkit-text-size-adjust: 100%;
   line-height: 1.15;
@@ -866,6 +866,8 @@ h1 + .lead, h2 + .lead, .h1 + .lead, .h2 + .lead {
   .hero:after {
     height: var(--img-height);
     background-image: url("../img/hero_mobile.png");
+    background-position: 0 100%;
+    background-size: cover;
     width: 100%;
   }
 
