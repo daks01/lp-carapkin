@@ -9,7 +9,7 @@
 }
 
 .flex-grid>.cell {
-    margin-bottom: var(--gutter);
+    margin-bottom: calc(var(--module) * 1.5);
     padding-right: calc(var(--gutter) / 2);
     padding-left: calc(var(--gutter) / 2);
     flex: 0 0 auto;
@@ -41,9 +41,13 @@
 }
 
 @media(min-width: 420px) {
+    .flex-grid>.cell {
+        margin-bottom: var(--size-3);
+    }
     .flex-grid>.cell.xs-1 {
         flex: 0 0 auto;
-        width: 100%
+        width: 100%;
+        margin-bottom: var(--size-3);
     }
 
     .flex-grid>.cell.xs-2 {
@@ -105,6 +109,9 @@
 }
 
 @media(min-width: 768px) {
+    .flex-grid>.cell {
+        margin-bottom: var(--gutter);
+    }
     .flex-grid>.cell.md-1 {
         flex: 0 0 auto;
         width: 100%

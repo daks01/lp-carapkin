@@ -51,14 +51,21 @@
 
 @media screen and (--screen-tablet) {
     :root {
-        --heading-1: 32px;
-        --heading-2: 24px;
-        --heading-3: 20px;
-        --lead-font-size: 16px
+        --heading-1: 40px;
+        --heading-2: 40px;
+        --heading-3: 24px;
+        --lead-font-size: 21px;
+        --gutter: var(--size-4);
     }
 }
 
 @media screen and (--screen-phone) {
-    :root {}
+    :root {
+        --heading-1: 25px;
+        --heading-2: 25px;
+        --heading-3: 22px;
+        --lead-font-size: 16px;
+        --gutter: calc(var(--module) * 2.5);
+    }
 }
 

@@ -74,7 +74,36 @@ h2 + .lead,
             font-size: 0;
         }
     }
-    &[open] summary {
+    &[open] > summary {
         display: none;
+    }
+}
+.details_on-mobile {
+    & > summary,
+    &[open] > summary {
+        display: none;
+    }
+}
+
+
+
+@media screen and (--screen-tablet) {}
+
+@media screen and (--screen-phone) {
+    h1 + .lead, 
+    h2 + .lead, 
+    .h1 + .lead, 
+    .h2 + .lead {
+        margin-top: -1em;
+    }
+
+    .details_on-mobile {
+        & > summary {
+            display: block;
+            text-align: center;
+        }
+        &[open] > summary {
+            display: none;
+        }
     }
 }

@@ -22,3 +22,12 @@
         filter: brightness(97%);
     }
 }
+
+
+@media screen and (--screen-tablet) {}
+
+@media screen and (--screen-phone) {
+    .button {
+        width: 100%;
+    }
+}

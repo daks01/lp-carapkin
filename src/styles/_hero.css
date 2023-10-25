@@ -18,7 +18,62 @@
 
 
 @media screen and (--screen-tablet) {
-    .hero::after {
-        background-image: url(../img/hero_mobile.png);
+    .hero {
+        text-align: center;
+        padding-bottom: 0;
+
+        &::after {
+            background-image: url(../img/hero.png);
+            height: 50%;
+        }
+
+        & .section__container {
+            padding-bottom: var(--size-4)
+        }
+        & .h2 {
+            margin-top: var(--size-5);
+            font-size: var(--heading-1);
+        }
+        & .h2, .lead {
+            max-width: calc(var(--module) * 38);
+        }
+        & .lead {
+            margin: var(--size-4) 0 var(--size-8);
+        }
+        & p:not([class]) {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (--screen-phone) {
+    .hero {
+        --img-height: calc(var(--module) * 30);
+
+        &::after {
+            background-image: url(../img/hero_mobile.png);
+            height: var(--img-height);
+            width: 100%;
+        }
+        & .section__container {
+            padding-top: var(--img-height);
+        }
+
+        & .h2 {
+            margin: var(--size-2) 0;
+        }
+        & .h2, 
+        & .lead {
+            max-width: 100%;
+            text-align: center !important;
+        }
+        & .lead {
+            margin: 0 0 var(--size-3);
+        }
+
+        & p:not([class]) {
+            max-width: 100%;
+        }
     }
 }

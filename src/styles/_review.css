@@ -14,3 +14,26 @@
     line-height: 1.5;
     display: block;
 }
+
+
+@media screen and (--screen-tablet) {
+    .review {
+        padding: var(--size-3) var(--size-3) var(--size-4);
+    }
+}
+
+@media screen and (--screen-phone) {
+    .review {
+        padding: var(--size-2);
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    .review__title {
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .review__date {
+        line-height: 2;
+        font-size: 16px;
+    }
+}

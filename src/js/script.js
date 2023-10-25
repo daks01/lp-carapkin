@@ -2,13 +2,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     initScrollAnimations();
     sendOrderForm();
+    initCarousels();
+    initDetails4Mobile();
 });
 
 function sendOrderForm() {
     const orderForm = document.querySelector('[data-order-form]');
     const url = orderForm.action;
 
-    orderForm.addEventListener('submit', (e) => {
+    orderForm?.addEventListener('submit', (e) => {
         e.preventDefault();
         fetch(url, {
             method:'post', 
@@ -62,4 +64,61 @@ function initScrollAnimations() {
             animateEl?.classList.add('will-animate');
         });
     }
+}
+
+function initCarousels() {
+    const carouselList = document.querySelectorAll('[data-splide]');
+
+    carouselList?.forEach(carousel => {
+        const hasArrows = JSON.parse(carousel.dataset.splide).arrows;
+        const slidesPerPage = JSON.parse(carousel.dataset.splide).perPage;
+        let splide = new Splide(carousel, {
+            type: 'loop',
+            perPage: slidesPerPage || 3,
+            padding: { right: '15rem' },
+            gap: 30,
+            arrows: hasArrows || true,
+            pagination: false,
+            breakpoints: {
+                1200: {
+                    perPage: 2,
+                },
+                1024: {
+                    perPage: 1,
+                },
+                767: {
+                    perPage: 1,
+                    padding: { left: 'var(--gutter)', right: '8rem' },
+                },
+                560: {
+                    gap: 25,
+                    padding: { left: '1rem', right: '3rem' },
+                },
+            },
+        })
+
+        carousel.querySelector('[data-splide-btn-next]')?.addEventListener('click', () => {
+            splide.go('+1')
+        });
+        carousel.querySelector('[data-splide-btn-prev]')?.addEventListener('click', () => {
+            splide.go('-1')
+        });
+        splide.mount();
+    });
+}
+
+function initDetails4Mobile() {
+    const mediaQuery = window.matchMedia('(max-width: 375px)');
+    const detailsList = document.querySelectorAll('[data-details-on-mobile]');
+
+    function handleResize(e) {
+        const isDetailOpen = !e.matches;
+        detailsList.forEach((details) => {
+          details.open = isDetailOpen;
+        });
+    }
+
+    mediaQuery.addListener(handleResize);
+
+    handleResize(mediaQuery);
 }

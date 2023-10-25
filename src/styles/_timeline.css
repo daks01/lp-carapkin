@@ -39,3 +39,37 @@
     font-weight: 600;
     padding: 0 var(--size-1);
 }
+
+@media screen and (--screen-desktop) {
+    .timeline__item {
+        width: 30%;
+    }
+}
+@media screen and (--screen-laptop) {
+    .timeline__item {
+        width: 50%;
+    }
+}
+
+
+@media screen and (--screen-tablet) {
+    .timeline {
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+        margin: 0 calc(var(--section-x-gutter) * -1) 0;
+    }
+    .timeline__item {
+        scroll-snap-align: start;
+        min-width: 60vw;
+        margin-bottom: 0;
+    }
+}
+@media screen and (--screen-phone) {
+    .timeline__item {
+        min-width: 85vw;
+    }
+}
